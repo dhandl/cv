@@ -1,0 +1,277 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[xcolor=dvipsnames]{scrartcl}
+
+\usepackage[dvipsnames]{xcolor}
+\definecolor{myblue}{RGB}{0,128,255}
+\reversemarginpar % Move the margin to the left of the page 
+%\textwidth = 597pt%\usepackage[margin=0.5in]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+%\renewcommand{\sfdefault}{phv}
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+\usepackage{fontawesome}
+
+
+\renewcommand{\cvheadingfont}{\Huge\color{myblue}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+%\hypersetup{colorlinks, breaklinks, urlcolor=RoyalBlue, linkcolor=RoyalBlue} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{MonthYearXXXX} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent = 1.0em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.0em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+\usepackage{vmargin}
+\setmarginsrb           { 1.2in}  % left margin
+                        { 0.6in}  % top margin
+                        { 1.0in}  % right margin
+                        { 0.8in}  % bottom margin
+                        {  20pt}  % head height
+                        {0.25in}  % head sep
+                        {   9pt}  % foot height
+                        { 0.3in}  % foot sep
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{David Handl}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Experimental Particle Physicist}\vspace{0.5em} % Personal information heading
+
+\NewEntry{\faGift}{\textit{Born in Austria,}}{26$^{\rm{th}}$ May, 1989} % Birthplace and date
+
+\NewEntry{\faHome}{Breisacher Stra{\ss}e 30, 81667 Munich, Germany}
+
+\NewEntry{\faEnvelope}{\href{mailto:david.handl@cern.ch}{david.handl@cern.ch}} % Email address
+
+%\NewEntry{website}{\href{http://www.hephy.at/en/hephy/staff-members/detail/name/handl/}{http://www.hephy.at/en/hephy/staff-members/detail/name/handl/}} % Personal website
+
+\NewEntry{\faPhone}{+49 177 411 300 9 }%\ \ $\cdotp$\ \ (M) +1 (000) 111 1112} % Phone number(s)
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+\noindent\spacedlowsmallcaps{\color{myblue}Core competencies}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+\Description{Excellent analytical skills of large-scale experimental data; advanced statistical techniques; vital laboratory skills; good knowledge of computer languages such as C, C++ and Python; ability to work collaboratively as a member of an international team; solid education in fundamental physics with the focus on particle physics}\vspace{2em} % competencies text
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{\color{myblue}\textsf{Research}}\vspace{1em}
+
+\NewEntry{May~'16-Present}{Ph.D. Student, Faculty of Physics, Ludwig-Maximilians-Universit\"at M\"unchen -- Munich}
+
+\Description{As an ambitous member of the ATLAS Collaboration I am actively contributing to a search for scalar top quarks in final states with exactly one electron or muon. I am studying the capability of novel machine learning algorithms to enhance the search sensitivity. Apart from that, I investigated potential improvements of the missing transverse energy high level object trigger system and currently I am contributing to efficiency measurements of muons with very low transverse momentum. In addition, I spent six months of my research abroad at the European Nuclear Research Facility (CERN) in Geneva, Switzerland, to get a detailed insight of internal operations and the work life at an international research environment. Since I am strongly dedicated in outreach affairs, I also took the chance to become an official visitor guide for several experiments and facilities, including the ATLAS underground cavern and I am volunteering as a tutor at physics masterclasses.\\}
+
+\NewEntry{Oct~'14-Dec~'15}{Master Student, Institute of High Energy Physics -- Vienna}
+
+\Description{As a master student I worked as an active member in a joint collaboration consisting of data analysis groups at the University of Athens, CERN, DESY Hamburg and the Institute of High Energy Physics in Vienna. We performed searches for supersymmetry with a single lepton final state in $13$ TeV data recorded by the CMS collaboration. I made significant contributions to the estimation of the $\rm{t\bar{t}+jets}$, $\rm{W+jets}$ and QCD multijet backgrounds.}% in final states with $0$ b-tagged jets, I investigated several kinematic variables to supress the main backgrounds and I also performed studies on systematic uncertainties.}% Reference: John \textsc{McDonald}\ \ $\cdotp$\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:john@lehman.com}{john@lehman.com}}
+
+%------------------------------------------------
+
+\NewEntry{Sept-Oct 2014}{Intern, Institute of High Energy Physics  -- Vienna}
+
+\Description{I performed electrical tests of the readout electronics for the Belle II Silicon Vertex Detector with the dedicated data acquisition software at the Institutes module cleanroom. Several important coefficients which reflect the quality and reliability of the readout chips were measured and a statistical evaluation was performed. Based on these tests I could localise faulty readout chips and they were sorted out.\\}% Reference: Bill \textsc{Lumbergh}\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:bill@initech.com}{bill@initech.com}}
+
+%------------------------------------------------
+
+\NewEntry{Oct-Dec 2013}{Intern, Institute of High Energy Physics -- Vienna}
+
+\Description{An optimization of a multivariate data analysis was perfomed to improve a search for supersymmetry. I studied different parameters of the machine learning algorithm to understand how the algorithm estimates a statistical model based on a given dataset.}%Results showed that including event shape variables to a certain collection of kinematic variables led to a slight improvement of signal efficiency.\\}% Reference: Big \textsc{Mike}\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:mike@buymore.com}{mike@buymore.com}}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{\color{myblue}Publications}\vspace{1em}
+
+%\NewEntry{2017}{~}
+
+\Description{\textit{Search for top squark pair production in final states with one isolated lepton, jets, and missing transverse momentum using 36~$fb^{-1}$ of $\sqrt{s}=13$~TeV $pp$ collision data with the ATLAS detector}, \href{http://arxiv.org/abs/1711.11520}{\texttt{arXiv:1711.11520}} (under review)\\}
+
+\Description{\textit{Search for top squarks in final states with one electron or muon in $\sqrt{s}=13$~TeV $pp$ collisions with the ATLAS detector}, in Proceedings of Science 2017\\}
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	Talks and posters
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{\color{myblue}Talks and posters}\vspace{1em}
+
+%\NewEntry{2018}{~}
+
+\Description{\textit{Applications of Machine Learning techniques at the ATLAS collaboration}, string\_data18 Workshop, March 2018\\}
+
+%\NewEntry{2017}{~}
+
+\Description{\textit{Search for top squarks in final states with one electron or muon in $\sqrt{s}=13$~TeV $pp$ collisions with the ATLAS detector}, EPS-HEP, July 2017\\}
+
+\vspace{1em} % Extra space between major sections
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{\color{myblue}Education}\vspace{1em}
+
+
+\NewEntry{2016-Present}{\textsc{Ludwig-Maximilians-Universit\"at M\"unchen}}
+
+\Description{Ph.D. candidate in Physics\newline}
+%Thesis: (tentative title)\textit{Search for stop quark pair production in the single lepton final state in 13 TeV pp collisions with the ATLAS detector}\newline
+%Supervisor: \textit{Prof.~Dorothee Schaile \& Dr.~Jeannine Wagner-Kuhr}\newline}
+
+\NewEntry{2013-2016}{\textsc{Vienna University of Technology}}
+
+\Description{M.Sc. in Technical Physics\newline}
+%Thesis: \textit{Background estimation for searches for supersymmetry in the single lepton final state in 13 TeV pp collisions}\newline
+%Supervisor: \textit{Prof.~Jochen Schieck \& Dr.~Robert Sch\"ofbeck}\newline}
+%Description: My thesis presents a search for supersymmetry with exactly one lepton, multiple jets and no b tagged jet in the final state with $13\rm{TeV}$ data taken in $2015$. The angle between the lepton and the W boson direction is used as the main discriminative variable. The central element of the thesis is the estimation of the most important backgrounds from control regions in data. The search is performed in exclusive regions based on the sum of the transverse momenta of all jets as well as the sum of the missing transverse energy and the lepton momentum.\newline}
+%Advisors: Prof.~Jochen Schieck \& Dr.~Wolfgang Adam}
+
+%------------------------------------------------
+
+\NewEntry{2009-2013}{\textsc{Vienna University of Technology}}
+
+\Description{B.Sc. in Technical Physics\newline}
+%Thesis: \textit{Implementation and optimization of an electrospray deposition system}\newline
+%Supervisor: \textit{Prof. Ulrike Diebold}\newline}
+%Description: I designed and implemented a purge chamber to optimize an electrospray depostion system. The electrospray was used to adsorb molecules on oxide surfaces. Tests showed that the implementation led to a significant increase of the purity of the molecular beam.\newline}
+%Advisors: Prof.~Ulrike Diebold}
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+%\spacedlowsmallcaps{Publications}\vspace{1em}
+
+%\NewEntry{June 2015}{Search for Supersymmetry in events with one lepton}
+
+%\Description{\MarginText{CMS-AN-14-288 internal analysis note}We present a strategy for an early inclusive single lepton search with 13 TeV data. We require a high threshold for the sum of missing transverse momentum and the transverse momentum of the lepton, which makes the search sensitive to R-parity conserving supersymmetry. We further use the search variable $\Delta\Phi$ to suppress the background. To optimize the sensitivity to various new physics topologies, we search in several exclusive categories, which differ in the number of jets and btags. To be less dependent on the new physiscs scale we also introduce separate search categories based on the sum of all jet transverse momenta and on the sum of the transverse missing momentum and the lepton.}%\\ Authors: John \textsc{Smith}, ~James \textsc{Smith}}
+
+%------------------------------------------------
+
+%\NewEntry{October 2015}{Search for Supersymmetry with single-lepton events at 13 TeV using 2015 data}
+
+%\Description{\MarginText{CMS-AN-15-207 internal analysis note}We present an inclusive single-lepton search with 13 TeV data taken in 2015. To optimize the sensitivity to various new physics topologies, we search in several exclusive categories, which differ in the number of jets and b-tagged jets.  We further use the angle between the lepton and the W boson direction, $\Delta\Phi$, to suppress the background. To be less dependent on the new physics scale we also introduce separate search categories based on the sum of all jet transverse momenta and on the sum of the transverse missing momentum and the lepton.}%\\ Authors: John \textsc{Smith}, ~James %\textsc{Smith}}
+
+%------------------------------------------------
+
+%\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{\color{myblue}Computing Skills}\vspace{1em}
+
+%\Description{\MarginText{Intermediate}\textsc{C++}}
+\Description{C, C++, Python, ROOT, Linux, Latex}
+%\Description{\MarginText{Advanced}\textsc{python}, \LaTeX, Linux}
+
+%\Description{\MarginText{Advanced}Computer Hardware and Support}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{\color{myblue}Other Information}\vspace{1em}
+
+%\Description{\MarginText{Awards}2011\ \ $\cdotp$\ \ School of Business Postgraduate Scholarship}
+
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%\Description{2010\ \ $\cdotp$\ \ Top Achiever Award -- Commerce}
+
+%------------------------------------------------
+
+%\vspace{1em}
+
+%\Description{\MarginText{Communication Skills}2010\ \ $\cdotp$\ \ Oral Presentation at the California Business Conference}
+
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%\Description{2009\ \ $\cdotp$\ \ Poster at the Annual Business Conference in Oregon}
+
+%------------------------------------------------
+
+\vspace{1em}
+
+\newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
+\settowidth{\langbox}{English} % Length equals the length of "English" - if you have a longer language in your list put it here
+
+\NewEntry{Languages}{~}
+
+\Description{\parbox{\langbox}{\textsc{German}}\ \ $\cdotp$\ \ \ Mothertongue}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Advanced }%(conversationally fluent)}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\parbox{\langbox}{\textsc{French}}\ \ $\cdotp$\ \ \ Basic (simple words and phrases only)}
+
+\vspace{1em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%------------------------------------------------
+
+\NewEntry{Interests}{~}
+
+\Description{running\ \ $\cdotp$\ \ skiing\ \ $\cdotp$\ \ football\ \ $\cdotp$\ \ reading\ \ $\cdotp$\ \ cooking\ \ $\cdotp$\ \ programming\ \ $\cdotp$\ \ photography}
+
+%----------------------------------------------------------------------------------------
+
+\end{cv}
+
+\end{document}
