@@ -20,16 +20,18 @@
 
 \documentclass[xcolor=dvipsnames]{scrartcl}
 
+\usepackage{graphicx}
+
 \usepackage[dvipsnames]{xcolor}
 \definecolor{myblue}{RGB}{0,128,255}
 \reversemarginpar % Move the margin to the left of the page 
 %\textwidth = 597pt%\usepackage[margin=0.5in]{geometry}
 
-\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{textcomp}
 
-%\renewcommand{\sfdefault}{phv}
+\renewcommand{\rmdefault}{ptm}
 
 \newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
 
@@ -43,19 +45,24 @@
 \usepackage{hyperref} % Required for adding links	and customizing them
 %\hypersetup{colorlinks, breaklinks, urlcolor=RoyalBlue, linkcolor=RoyalBlue} % Set link colors
 
-\newlength{\datebox}\settowidth{\datebox}{MonthYearXXXX} % Set the width of the date box in each block
+\newlength{\datebox}\settowidth{\datebox}{MonthYearXXXXX} % Set the width of the date box in each block
 
-\newcommand{\NewEntry}[3]{\noindent\hangindent = 1.0em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.0em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\newlength{\iconbox}\settowidth{\iconbox}{GIFT} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0  \parbox{\datebox}{\textit{#1}}\hspace{0.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\NewInfo}[2]{\noindent\hangindent=2em\hangafter=0  \parbox{\iconbox}#1\hspace{0.5em} #2 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
 \vspace{0.5em}} % Add some white space after each new entry
 
 \newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
 \usepackage{vmargin}
-\setmarginsrb           { 1.2in}  % left margin
+\setmarginsrb           { 2cm}  % left margin
                         { 0.6in}  % top margin
-                        { 1.0in}  % right margin
+                        { 2cm}  % right margin
                         { 0.8in}  % bottom margin
-                        {  20pt}  % head height
-                        {0.25in}  % head sep
+                        { 12pt}  % head height
+                        { 9pt}  % head sep
                         {   9pt}  % foot height
                         { 0.3in}  % foot sep
 
@@ -69,25 +76,40 @@
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
 
+
+
+%\hfill
+
+%\begin{minipage}{0.6\textwidth}\raggedleft
+
 \begin{cv}{\spacedallcaps{David Handl}}\vspace{1.5em} % Your name
 
-\noindent\spacedlowsmallcaps{Experimental Particle Physicist}\vspace{0.5em} % Personal information heading
+\begin{minipage}{0.7\textwidth}%\centering
+\noindent\spacedlowsmallcaps{Experimental Particle Physicist}\vspace{0.5em}% Personal information heading
 
-\NewEntry{\faGift}{\textit{Born in Austria,}}{26$^{\rm{th}}$ May, 1989} % Birthplace and date
+\NewInfo{\faGift}{\textit{Born in Austria,}}{26$^{\mathrm{th}}$ May, 1989}% Birthplace and date
 
-\NewEntry{\faHome}{Breisacher Stra{\ss}e 30, 81667 Munich, Germany}
+\NewInfo{\faHome}{Breisacher Stra{\ss}e 30, 81667 Munich, Germany}
 
-\NewEntry{\faEnvelope}{\href{mailto:david.handl@cern.ch}{david.handl@cern.ch}} % Email address
+%\NewEntry{\faEnvelope}{\href{mailto:david.handl@cern.ch}{david.handl@cern.ch}} % Email address
+\NewInfo{\faEnvelope}{\href{mailto:handl.david89@gmail.com}{handl.david89@gmail.com}} % Email address
 
 %\NewEntry{website}{\href{http://www.hephy.at/en/hephy/staff-members/detail/name/handl/}{http://www.hephy.at/en/hephy/staff-members/detail/name/handl/}} % Personal website
 
-\NewEntry{\faPhone}{+49 177 411 300 9 }%\ \ $\cdotp$\ \ (M) +1 (000) 111 1112} % Phone number(s)
+\NewInfo{\faPhone}{+49 177 411 300 9 }%\ \ $\cdotp$\ \ (M) +1 (000) 111 1112} % Phone number(s)
+%\NewEntry{\faGithub}{\href{https://github.com/dhandl}{https://github.com/dhandl}} % Email address
+
+\end{minipage}
+\begin{minipage}{0.25\textwidth}%\raggedleft% adapt widths of minipages to your needs
+  \includegraphics[width=0.9\textwidth]{dhandl.png}
+\end{minipage}
+
 
 \vspace{1em} % Extra white space between the personal information section and goal
 
 \noindent\spacedlowsmallcaps{\color{myblue}Core competencies}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
 
-\Description{Excellent analytical skills of large-scale experimental data; advanced statistical techniques; vital laboratory skills; good knowledge of computer languages such as C, C++ and Python; ability to work collaboratively as a member of an international team; solid education in fundamental physics with the focus on particle physics}\vspace{2em} % competencies text
+\Description{Excellent analytical skills of large-scale data\ \ $\cdotp$\ \ In-depth knowledge of advanced statistics and mathematics\ \ $\cdotp$\ \ Vital skills in computer science as well as strong expertise in programming languages such as C, C++ and Python, etc.\ \ $\cdotp$\ \ Excellent experience in the fundamentals of machine learning and libraries such as Keras and tensorflow, etc.\ \ $\cdotp$\ \ Substantial know-how to work collaboratively as a member of an international team\ \ $\cdotp$\ \ Solid education in fundamental physics with the focus on particle physics\ \ $\cdotp$\ \ Strongly motivated, communicative and cooperative appearance}\vspace{2em} % competencies text
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE
@@ -101,7 +123,7 @@
 
 \NewEntry{Oct~'14-Dec~'15}{Master Student, Institute of High Energy Physics -- Vienna}
 
-\Description{As a master student I worked as an active member in a joint collaboration consisting of data analysis groups at the University of Athens, CERN, DESY Hamburg and the Institute of High Energy Physics in Vienna. We performed searches for supersymmetry with a single lepton final state in $13$ TeV data recorded by the CMS collaboration. I made significant contributions to the estimation of the $\rm{t\bar{t}+jets}$, $\rm{W+jets}$ and QCD multijet backgrounds.}% in final states with $0$ b-tagged jets, I investigated several kinematic variables to supress the main backgrounds and I also performed studies on systematic uncertainties.}% Reference: John \textsc{McDonald}\ \ $\cdotp$\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:john@lehman.com}{john@lehman.com}}
+\Description{As a master student I worked as an active member in a joint collaboration consisting of data analysis groups at the University of Athens, CERN, DESY Hamburg and the Institute of High Energy Physics in Vienna. We performed searches for supersymmetry with a single lepton final state in $13$ TeV data recorded by the CMS collaboration. I made significant contributions to the estimation of the $\mathrm{t\bar{t}+jets}$, $\mathrm{W+jets}$ and QCD multijet backgrounds.}% in final states with $0$ b-tagged jets, I investigated several kinematic variables to supress the main backgrounds and I also performed studies on systematic uncertainties.}% Reference: John \textsc{McDonald}\ \ $\cdotp$\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:john@lehman.com}{john@lehman.com}}
 
 %------------------------------------------------
 
@@ -119,7 +141,7 @@
 
 \vspace{1em} % Extra space between major sections
 \newpage
-
+\thispagestyle{empty}
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
