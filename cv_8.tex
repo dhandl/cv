@@ -31,7 +31,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
 
-\renewcommand{\rmdefault}{ptm}
+%\renewcommand{\rmdefault}{phv}
 
 \newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
 
@@ -97,7 +97,8 @@
 %\NewEntry{website}{\href{http://www.hephy.at/en/hephy/staff-members/detail/name/handl/}{http://www.hephy.at/en/hephy/staff-members/detail/name/handl/}} % Personal website
 
 \NewInfo{\faPhone}{+49 177 411 300 9 }%\ \ $\cdotp$\ \ (M) +1 (000) 111 1112} % Phone number(s)
-%\NewEntry{\faGithub}{\href{https://github.com/dhandl}{https://github.com/dhandl}} % Email address
+
+\NewInfo{\faGithub}{\href{https://github.com/dhandl}{https://github.com/dhandl}} % Email address
 
 \end{minipage}
 \begin{minipage}{0.25\textwidth}%\raggedleft% adapt widths of minipages to your needs
@@ -119,7 +120,7 @@
 
 \NewEntry{May~'16-Present}{Ph.D. Student, Faculty of Physics, Ludwig-Maximilians-Universit\"at M\"unchen -- Munich}
 
-\Description{As an ambitous member of the ATLAS Collaboration I am actively contributing to a search for scalar top quarks in final states with exactly one electron or muon. I am studying the capability of novel machine learning algorithms to enhance the search sensitivity. Apart from that, I investigated potential improvements of the missing transverse energy high level object trigger system and currently I am contributing to efficiency measurements of muons with very low transverse momentum. In addition, I spent six months of my research abroad at the European Nuclear Research Facility (CERN) in Geneva, Switzerland, to get a detailed insight of internal operations and the work life at an international research environment. Since I am strongly dedicated in outreach affairs, I also took the chance to become an official visitor guide for several experiments and facilities, including the ATLAS underground cavern and I am volunteering as a tutor at physics masterclasses.\\}
+\Description{As an ambitous member of the ATLAS Collaboration I am actively contributing to a search for scalar top quarks in final states with exactly one electron or muon. I am studying the capability of novel machine learning algorithms to enhance the search sensitivity. Apart from that, I investigated potential improvements of the missing transverse energy high level object trigger system. In addition, I spent six months of my research abroad at the European Nuclear Research Facility (CERN) in Geneva, Switzerland, to get a detailed insight of internal operations and the work life at an international research environment. Since I am strongly dedicated in outreach affairs, I also took the chance to become an official visitor guide for several experiments and facilities, including the ATLAS underground cavern. I am a tutor for particle physics courses at the LMU Munich and I am also volunteering as a tutor at physics masterclasses.\\}
 
 \NewEntry{Oct~'14-Dec~'15}{Master Student, Institute of High Energy Physics -- Vienna}
 
@@ -129,13 +130,13 @@
 
 \NewEntry{Sept-Oct 2014}{Intern, Institute of High Energy Physics  -- Vienna}
 
-\Description{I performed electrical tests of the readout electronics for the Belle II Silicon Vertex Detector with the dedicated data acquisition software at the Institutes module cleanroom. Several important coefficients which reflect the quality and reliability of the readout chips were measured and a statistical evaluation was performed. Based on these tests I could localise faulty readout chips and they were sorted out.\\}% Reference: Bill \textsc{Lumbergh}\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:bill@initech.com}{bill@initech.com}}
+\Description{I performed electrical tests of the readout electronics for the Belle II Silicon Vertex Detector with the dedicated data acquisition software at the Institutes' module cleanroom. Several important coefficients which reflect the quality and reliability of the readout chips were measured and a statistical evaluation was performed. Based on these tests faulty readout chips could be localised and were sorted out.\\}% Reference: Bill \textsc{Lumbergh}\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:bill@initech.com}{bill@initech.com}}
 
 %------------------------------------------------
 
 \NewEntry{Oct-Dec 2013}{Intern, Institute of High Energy Physics -- Vienna}
 
-\Description{An optimization of a multivariate data analysis was perfomed to improve a search for supersymmetry. I studied different parameters of the machine learning algorithm to understand how the algorithm estimates a statistical model based on a given dataset.}%Results showed that including event shape variables to a certain collection of kinematic variables led to a slight improvement of signal efficiency.\\}% Reference: Big \textsc{Mike}\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:mike@buymore.com}{mike@buymore.com}}
+\Description{An optimization of a multivariate data analysis was perfomed to improve a search for supersymmetry. I studied parameter optimisation of neural networks to understand how the algorithm estimates a statistical model based on a given dataset.}%Results showed that including event shape variables to a certain collection of kinematic variables led to a slight improvement of signal efficiency.\\}% Reference: Big \textsc{Mike}\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:mike@buymore.com}{mike@buymore.com}}
 
 %------------------------------------------------
 
@@ -179,16 +180,19 @@
 
 \noindent\spacedlowsmallcaps{\color{myblue}Education}\vspace{1em}
 
+\NewEntry{August 2018}{\textsc{Hadron Collider Physics Summer School at Fermilab}}
+
+\Description{I entered one of the most prestigious summer schools about high energy physics at Fermilab, Batavia, Illinois.}
 
 \NewEntry{2016-Present}{\textsc{Ludwig-Maximilians-Universit\"at M\"unchen}}
 
-\Description{Ph.D. candidate in Physics\newline}
+\Description{Ph.D. candidate in Physics}
 %Thesis: (tentative title)\textit{Search for stop quark pair production in the single lepton final state in 13 TeV pp collisions with the ATLAS detector}\newline
 %Supervisor: \textit{Prof.~Dorothee Schaile \& Dr.~Jeannine Wagner-Kuhr}\newline}
 
 \NewEntry{2013-2016}{\textsc{Vienna University of Technology}}
 
-\Description{M.Sc. in Technical Physics\newline}
+\Description{M.Sc. in Technical Physics}
 %Thesis: \textit{Background estimation for searches for supersymmetry in the single lepton final state in 13 TeV pp collisions}\newline
 %Supervisor: \textit{Prof.~Jochen Schieck \& Dr.~Robert Sch\"ofbeck}\newline}
 %Description: My thesis presents a search for supersymmetry with exactly one lepton, multiple jets and no b tagged jet in the final state with $13\rm{TeV}$ data taken in $2015$. The angle between the lepton and the W boson direction is used as the main discriminative variable. The central element of the thesis is the estimation of the most important backgrounds from control regions in data. The search is performed in exclusive regions based on the sum of the transverse momenta of all jets as well as the sum of the missing transverse energy and the lepton momentum.\newline}
@@ -198,7 +202,7 @@
 
 \NewEntry{2009-2013}{\textsc{Vienna University of Technology}}
 
-\Description{B.Sc. in Technical Physics\newline}
+\Description{B.Sc. in Technical Physics}
 %Thesis: \textit{Implementation and optimization of an electrospray deposition system}\newline
 %Supervisor: \textit{Prof. Ulrike Diebold}\newline}
 %Description: I designed and implemented a purge chamber to optimize an electrospray depostion system. The electrospray was used to adsorb molecules on oxide surfaces. Tests showed that the implementation led to a significant increase of the purity of the molecular beam.\newline}
@@ -234,7 +238,7 @@
 \noindent\spacedlowsmallcaps{\color{myblue}Computing Skills}\vspace{1em}
 
 %\Description{\MarginText{Intermediate}\textsc{C++}}
-\Description{C, C++, Python, ROOT, Linux, Latex}
+\Description{C, C++, Python, keras, tensorflow, scikit-learn, ROOT, Linux, Github, Latex, MS Office}
 %\Description{\MarginText{Advanced}\textsc{python}, \LaTeX, Linux}
 
 %\Description{\MarginText{Advanced}Computer Hardware and Support}
